@@ -9,7 +9,7 @@ def main() -> None:
     attempt: bool = False
     secret: str = "codes"
     while turn_no <= 6 and attempt is not True:
-        print(f" === Turn {turn_no}/6 === ")
+        print(f"=== Turn {turn_no}/6 ===")
         guess: str = input_guess (len(secret))
         print(emojified(guess, secret))
         if guess == secret:
@@ -23,13 +23,14 @@ def main() -> None:
 def contains_char(any_length: str, single_char: str ) -> bool:
     """To find out if the letter belongs in the word."""
     assert len(single_char) == 1
+    validity: bool = False
     char_idx: int = 0
-    while char_idx < len(any_length):
+    while validity is False and char_idx < len(any_length) :
         if single_char == any_length[char_idx]:
-            return True
+            validity = True
         else: 
-            return False
-    char_idx = char_idx + 1
+            char_idx = char_idx + 1
+    return validity
 
 
 white_box: str = "\U00002B1C"
