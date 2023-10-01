@@ -2,7 +2,7 @@
 
 __author__ = "730517765"
 
-#
+
 user_name = input("What is your 6 letter guess? ")
 secret_word: str = "python"
 
@@ -42,7 +42,7 @@ print(emoji)
 
 # Successful output
 if user_name == secret_word:
-     print("Woo! you got it!")
+    print("Woo! you got it!")
 
 else:
-     print("Not quite. Play again soon!")
+    print("Not quite. Play again soon!")
