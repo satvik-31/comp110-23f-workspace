@@ -23,14 +23,13 @@ def main() -> None:
 def contains_char(any_length: str, single_char: str ) -> bool:
     """To find out if the letter belongs in the word."""
     assert len(single_char) == 1
-    validity: bool = False
     char_idx: int = 0
-    while validity is False and char_idx < len(any_length):
+    while char_idx < len(any_length):
         if single_char == any_length[char_idx]:
-            validity is True
+            return True
         else: 
-            validity is False
-            char_idx = char_idx + 1
+            return False
+    char_idx = char_idx + 1
 
 
 white_box: str = "\U00002B1C"
