@@ -20,7 +20,7 @@ def main() -> None:
         print("X/6 - Sorry, try again tomorrow")
 
 
-def contains_char(any_length: str, single_char: str )-> bool:
+def contains_char(any_length: str, single_char: str) -> bool:
     """To find out if the letter belongs in the word."""
     assert len(single_char) == 1
     validity: bool = False
@@ -38,7 +38,7 @@ green_box: str = "\U0001F7E9"
 yellow_box: str = "\U0001F7E8"
 
 
-def emojified(guess: str, secret:str) -> str: 
+def emojified(guess: str, secret: str) -> str: 
     """To find out the placement of the correct letters."""
     assert len(guess) == len(secret)
     emoji: str = ""
