@@ -30,7 +30,7 @@ def max(large: list[int])->int:
 def is_equal(list1: list[int], list2: list[int])->bool:
     """Checks if the two lists are equal to each other"""
     ildx: int = 0
-    while ildx < len(list1):
+    while ildx < len(list1) and ildx < len(list2):
         if list1[ildx] == list2[ildx]:
             ildx += 1
         else: 
