@@ -1,7 +1,7 @@
 """Testing Conditionals with low card example"""
 
 low_card: int = 2
-current_card: int = 3
+current_card: int = 1
 
 if current_card < low_card:
     low_card = current_card

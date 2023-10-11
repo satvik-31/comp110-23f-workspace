@@ -2,8 +2,6 @@
 
 ___author__: str ="730517765"
 
-
-
 def all(options: list[int], the_one: int) -> bool:
     """Finds if every number in the list is equal to one outside"""
     idx: int = 0

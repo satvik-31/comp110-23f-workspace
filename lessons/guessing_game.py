@@ -3,18 +3,14 @@
 from random import randint
 
 secret: int = randint(1,10)
-print(secret)
-
-
 guess: int = int(input("guess a number between 1 and 10: "))
 
 while guess != secret: 
     print ("Wrong")
-    if (guess < 1) or (guess > 10):
-        print("Thats not between 1 and 10")
-    if guess > secret:
-        print ("Your guess is too high!")
-    else:
-        print("Your guess is too low")
+    if (guess % 2) == 0:
+        print("Your guess should be odd")
+    else: 
+        (guess % 2) == 1
+        print ("Your guess should be even!")
     guess = int(input("Guess Again: "))
 print ("You got it!")
