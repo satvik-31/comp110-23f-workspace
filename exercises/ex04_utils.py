@@ -16,7 +16,7 @@ def all(options: list[int], the_one: int) -> bool:
     return True
         
 
-def max(large: list[int])-> int:
+def max(large: list[int]) -> int:
     """Given a list of functions, returns the largest value!"""
     if len(large) == 0:
         raise ValueError("max() arg is an empty List")
@@ -30,7 +30,7 @@ def max(large: list[int])-> int:
     return big
 
 
-def is_equal(list1: list[int], list2: list[int])-> bool:
+def is_equal(list1: list[int], list2: list[int]) -> bool:
     """Checks if the two lists are equal to each other!"""
     ildx: int = 0
     total: int = 0 
