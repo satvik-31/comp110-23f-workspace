@@ -20,13 +20,13 @@ def main() -> None:
         print("X/6 - Sorry, try again tomorrow")
 
 
-def contains_char(any_length: str, single_char: str) -> bool:
+def contains_char(word: str, single_char: str) -> bool:
     """To find out if the letter belongs in the word."""
     assert len(single_char) == 1
     validity: bool = False
     char_idx: int = 0
-    while validity is False and char_idx < len(any_length):
-        if single_char == any_length[char_idx]:
+    while validity is False and char_idx < len(word):
+        if single_char == word[char_idx]:
             validity = True
         else: 
             char_idx = char_idx + 1
