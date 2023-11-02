@@ -9,8 +9,8 @@ from turtle import Turtle, colormode, done
 def main() -> None: 
     """The entry point of my scene."""
     hills: Turtle = Turtle()
-    lake: Turtle = Turtle()
-    draw_sun: Turtle = Turtle()
+    #water: Turtle = Turtle()
+    #sun: Turtle = Turtle()
     mountain(hills, 40, 0 ,80)
     mountain(hills, -40, 0,80)
     mountain(hills, 0, 0, 80)
@@ -19,8 +19,8 @@ def main() -> None:
     mountain(hills, -200, 0, 80)
     mountain(hills, -240, 0, 80)
     mountain(hills, -280, 0, 80)
-    lake(water, -200, 0, 400)
-    draw_sun(sun, -200, 200)
+    lake(hills, -200, 200)
+    draw_sun(hills, -200, 200)
 
     done()
 
@@ -40,10 +40,11 @@ def mountain (hills: Turtle, x: float, y: float, width: float ) -> None:
 
 def lake(water: Turtle, height: float, width: float) -> None: 
     """Fills whole area below the mountains with water"""
-    water.colour("blue")
+    water.color("blue")
     water.penup()
-    water.setheading(0,0)
-    water.fillcolor()
+    water.goto(-200, -200)
+    water.setheading(0.0)
+    water.fillcolor("blue")
     water.pendown()
     j: int = 0 
     while j < 4:

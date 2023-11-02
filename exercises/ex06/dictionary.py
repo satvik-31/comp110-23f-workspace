@@ -33,6 +33,3 @@ def favorite_color(y: dict[str,str]) -> str:
             no_colour = freq
             colour_app = colour
     return colour_app
-
-
-
