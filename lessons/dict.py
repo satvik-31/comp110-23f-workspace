@@ -1,6 +1,6 @@
 """Practicing Dictionaries."""
 
-#name: dict<[key typee>, <value type>]
+#name: dict<[key type>, <value type>]
 icecream:dict[str,int] = {"chocolate" : 12, "vanilla": 8, "strawberry": 5}
 print("Made my dictionary.")
 print(icecream)
@@ -9,9 +9,11 @@ print(icecream)
 icecream["mint"] = 3
 print("Mint add:")
 print(icecream)
+
 #accessing value
 print("Choc orders: ")
 print(icecream["chocolate"])
+
 #adjusting value
 icecream["vanilla"]=10
 print(f"After adding vanilla: {icecream}")
