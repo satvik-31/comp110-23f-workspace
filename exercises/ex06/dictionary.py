@@ -9,6 +9,8 @@ def invert(x: dict[str, str]) -> dict[str, str]:
     """Inverts the keys and the values!"""
     dict_inv: dict[str, str] = {}
     for key in x:
+        if x[key] in dict_inv:
+            raise KeyError("Error: More than one of the same key!")
         value = x[key]
         dict_inv[value] = key
     return dict_inv
@@ -60,9 +62,10 @@ def alphabetizer(categorize: list[str]) -> dict[str, list[str]]:
 
 
 def update_attendance(exist: dict[str, list[str]], day: str, stud: str) -> dict[str, list[str]]:
-    """Mutate and return dictionary with days as keys and students in attendacne as values."""
+    """Mutate and return dictionary with days as keys and students in attendance as values."""
     if day in exist:
-        exist[day] = exist[day] + [stud]
+        if stud not in exist[day]:
+            exist[day].append(stud)
 
     else:
         exist[day] = [stud]
