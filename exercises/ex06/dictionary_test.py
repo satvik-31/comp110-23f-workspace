@@ -94,10 +94,27 @@ def test_alpha3():
 # Use Case - Update_Attendance
 def test_attend():
     """Returns days as keys and students in attendance as values."""
-    exist: dict[str, list[str]] = {"Monday": ["George", "Mandy", "Sunny"], "Tuesday" : ["Sunny"]}
+    exist: dict[str, list[str]] = {"Monday": ["George", "Mandy", "Sunny"]}
     day: str = "Monday"
     stud: str = "George"
-    assert update_attendance(exist, day, stud) == {"Monday", ["George", "Mandy"]}
+    assert update_attendance(exist, day, stud) == {"Monday": ["George", "Mandy", "Sunny"]}
+
+
+def test_attender():
+    """Returns days as keys and students in attendance as values."""
+    exist: dict[str, list[str]] = {"Monday": ["Bon", "Mon"]}
+    day: str = "Tuesday"
+    stud: str = "Tron"
+    assert update_attendance(exist, day, stud) == {"Monday": ["Bon", "Mon"], "Tuesday": ["Tron"]}
+
+
+# Edge Case - Update Attendance
+def test_attendance():
+    """Returns days as keys and students in attendance as values."""
+    exist: dict[str, list[str]] = {}
+    day: str = ""
+    stud: str = ""
+    assert update_attendance(exist, day, stud) == {"": [""]}
 
 
 
