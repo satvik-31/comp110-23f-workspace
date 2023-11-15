@@ -23,7 +23,7 @@ def test_invert1():
     assert y
 
 
-#Edge Case - Invert 
+# Edge Case - Invert 
 def test_invert2():
     """Inverts the keys and values!"""
     x = {}
@@ -55,17 +55,17 @@ def test_mostcolor():
 def test_counter():
     """Returns the frequency of an item appearing in a list."""
     list_of_stuff: list[str] = ["Ben", "Ten", "Ben", "Franklin", "Ben", "Kingsley"]
-    assert count(list_of_stuff) == {"Ben": 3, "Ten": 1, "Franklin" : 1, "Kingsley" : 1}
+    assert count(list_of_stuff) == {"Ben": 3, "Ten": 1, "Franklin": 1, "Kingsley": 1}
 
 
-def test_counter2() :
+def test_counter2():
     """Returns the frequency of an item appearing in a list."""
     list_of_stuff: list[str] = ["Thor", "Iron Man", "Batman", "Superman", "Winter Soldier", "Mandarin"]
-    assert count(list_of_stuff) == {"Thor": 1, "Iron Man": 1, "Batman" : 1, "Superman" : 1, "Winter Soldier" : 1, "Mandarin" : 1}
+    assert count(list_of_stuff) == {"Thor": 1, "Iron Man": 1, "Batman": 1, "Superman": 1, "Winter Soldier": 1, "Mandarin": 1}
 
 
 # Edge Case - Count
-def test_counter3() :
+def test_counter3():
     """Returns an empty dictionary when an empty list is input."""
     list_of_stuff: list[str] = []
     assert count(list_of_stuff) == {}
@@ -75,13 +75,13 @@ def test_counter3() :
 def test_alpha():
     """Returns keys with a letter and values as words beginning with that letter."""
     categorize: list[str] = ["Bio", "Bronco", "Dinosaur", "Destiny"]
-    assert alphabetizer(categorize) == {"b" : ["Bio", "Bronco"], "d": ["Dinosaur", "Destiny"]}
+    assert alphabetizer(categorize) == {"b": ["Bio", "Bronco"], "d": ["Dinosaur", "Destiny"]}
 
 
 def test_alpha2():
     """Returns keys with a letter and values as words beginning with that letter."""
     categorize: list[str] = ["Burt", "Brynn", "Dali", "Dame", "Grodd", "Baird",]
-    assert alphabetizer(categorize) == {"b" : ["Burt", "Brynn", "Baird"], "d": ["Dali", "Dame"],"g": ["Grodd"]}
+    assert alphabetizer(categorize) == {"b": ["Burt", "Brynn", "Baird"], "d": ["Dali", "Dame"], "g": ["Grodd"]}
 
 
 # Edge Case - Alphabetizer 
@@ -115,7 +115,3 @@ def test_attendance():
     day: str = ""
     stud: str = ""
     assert update_attendance(exist, day, stud) == {"": [""]}
-
-
-
-

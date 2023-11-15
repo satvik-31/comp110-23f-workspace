@@ -41,3 +41,6 @@ print(my_pizza.price())
 
 # Calling a method 
 my_pizza.price()
+
+my_other_pizza: Pizza = my_pizza.make_new_pizza_add_new_toppings(2)
+print(my_other_pizza.toppings)

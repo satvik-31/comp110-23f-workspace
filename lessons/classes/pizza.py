@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-
 class Pizza:
     #attributes 
     size: str
@@ -30,5 +29,14 @@ class Pizza:
         if self.gluten_free:
             price += 1.00 
         return price
+    
+    def add_toppings(self, num_toppings: int):
+        """MoDIFIES THE attribute of toppings."""
+        self.toppings += num_toppings
 
- 
+    def make_new_pizza_add_new_toppings(self, num_toppings: int) -> Pizza:
+        """Make new pizza with existing pizza properties and add new toppings."""
+        new_pizza: Pizza = Pizza(self.size, self.toppings + num_toppings, self.gluten_free)
+        return new_pizza
+        
+my_pizza: Pizza  = Pizza 
