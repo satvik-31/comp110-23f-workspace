@@ -5,5 +5,5 @@ def mimic_letter(my_words: str, letter_idx: int)-> str:
  else: 
    return my_words
 
-value: str = input ("Input a word: ")
+
 
