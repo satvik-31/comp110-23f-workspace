@@ -4,6 +4,6 @@ def mimic_letter(my_words: str, letter_idx: int)-> str:
     return "Too high of an index"
  else: 
    return my_words
-
-
+ 
+mimic_letter
 

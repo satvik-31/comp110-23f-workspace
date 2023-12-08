@@ -8,6 +8,7 @@ __author__ = "730517765"
 
 
 class Simpy:
+    """Creating Simpy."""
     values: list[float]
 
     # TODO: Your constructor and methods will go here.
@@ -15,22 +16,22 @@ class Simpy:
         """Initialize arguments to attirbute value."""
         self.values = ones
 
-    def __str__(self):
+    def __str__(self) -> str:
         """Prints result of the attributes."""
         result: str = f"Simpy({self.values})"
         return result
     
-    def fill(self, number_to_fill: float, number_of_vals_to_fill: int):
+    def fill(self, number_to_fill: float, number_of_vals_to_fill: int) -> None:
         """Fill Simpy's values with a specific number of repeating values."""
         filled_with = []
         i: int = 0
         while i < number_of_vals_to_fill:
             filled_with.append(number_to_fill)
             i += 1
-        self.values = filled_with        
+        self.values = filled_with
         return None
     
-    def arange(self, start: float, stop: float, step: float = 1.0):
+    def arange(self, start: float, stop: float, step: float = 1.0) -> None:
         """Fill in the values attribute with a range of values between start and stop."""
         assert step != 0.0
         list_w_ranges = []
@@ -46,10 +47,10 @@ class Simpy:
         result: list[float] = self.values
         return sum(result)
     
-    def __add__(self, factor: Simpy | float ) -> Simpy:
+    def __add__(self, factor: Union[Simpy, float]) -> Simpy:
         """Returns a new Simpy Object."""
         result = Simpy([])
-        if type(factor) != float:
+        if type(factor) is not float:
             assert len(self.values) == len(factor.values)
             for idx in range(len(self.values)):
                 result.values.append(self.values[idx] + factor.values[idx])
@@ -58,10 +59,10 @@ class Simpy:
                 result.values.append(elem + factor)
         return result
     
-    def __pow__(self, factor: Simpy | float) -> Simpy:
+    def __pow__(self, factor: Union[Simpy, float]) -> Simpy:
         """Exponent function."""
         result = Simpy([])
-        if type(factor) != float:
+        if type(factor) is not float:
             assert len(self.values) == len(factor.values)
             for idx in range(len(self.values)):
                 result.values.append(self.values[idx] ** factor.values[idx])
@@ -70,7 +71,7 @@ class Simpy:
                 result.values.append(elem ** factor)
         return result
     
-    def __eq__(self, factor: Simpy | float) -> list[bool]:
+    def __eq__(self, factor: Union[Simpy, float]) -> list[bool]:
         """Called when == operator is used."""
         list: list[bool] = []
         if type(factor) is float:
@@ -89,7 +90,7 @@ class Simpy:
                 idx += 1    
         return list
     
-    def __gt__(self, factor: Simpy | float):
+    def __gt__(self, factor: Union[float, Simpy]) -> list[bool]:
         """Called when == operator is used."""
         list: list[bool] = []
         if type(factor) is float:
@@ -108,7 +109,7 @@ class Simpy:
                 idx += 1
         return list
     
-    def __getitem__(self, factor: int | Simpy) -> float | Simpy:
+    def __getitem__(self, factor: Union[int, list[bool]]) -> Union[float, Simpy]:
         """Susbcription Notation with SImpy."""
         result: float = 0.0
         result_simpy: Simpy = Simpy([])
@@ -122,23 +123,3 @@ class Simpy:
                     result_simpy.values.append(self.values[i])
                 i += 1
             return result_simpy
-
-"""
-pull = Simpy([1.,1.,1.,1.])
-print(pull)
-twos = Simpy([])
-twos.fill(2.0,3)
-print("Actual: ", twos, " - Expected: Simpy([2.0, 2.0, 2.0])")
-negative = Simpy([])
-negative.arange
-"""
-            
-            
-
-            
-            
-
-
-
-    
-
